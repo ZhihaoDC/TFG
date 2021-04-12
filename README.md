@@ -8,7 +8,7 @@ This is a repository created to keep track of changes in the code for my degree'
   
   
 
-## marvel-social-network (Girvan-Newman Algorithm) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ZhihaoDC/TFG/blob/main/marvel_social_network.ipynb)
+## marvel-social-network (Girvan-Newman Algorithm) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ZhihaoDC/TFG/blob/main/source/marvel_social_network.ipynb)
   A notebook that implements the Girvan-Newman algorithm for the graph contained in the marvel-social-network.csv dataset.
   Networkx.Graph representation is used, but functionality of the Girvan-Newman algorithm is fully implemented.
   
