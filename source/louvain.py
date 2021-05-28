@@ -67,6 +67,32 @@ def rename(community):
 
 # transformed = { key:my_dict[value] for key,value in my_community.items()}
 
+
+
+def sum_tot(graph, community, community_name):
+  nodes_C = [node for node, com in community.items() if com == community_name] #nodes in community C
+  edges_C = graph.edges(nodes_C, data=True)
+  sum_tot = 0
+
+  for u,v,data in edges_C:
+    weight = data['weight']
+    sum_tot += weight
+
+  return sum_tot
+
+def ki_in(graph, community, selected, community_name):
+  nodes_C = [node for node, com in community.items() if com == community_name] #nodes in community C
+  incident_i = graph.edges(selected, data=True)
+  ki_in = 0
+
+  for u,v,data in incident_i:
+    weight = data['weight']
+
+    if ((u in nodes_C) and (v == selected)) or ((v in nodes_C) and (u == selected)):
+      ki_in += weight
+
+  return ki_in
+
 def first_step(graph, m, community):
   """
   Computes one level of communities in Louvain's algorithm
@@ -213,7 +239,7 @@ def draw_merged_communities(graph):
   plt.show()
   plt.show()
 
-def Louvain2(graph):
+def Louvain(graph):
   """ 
   Detects community in graph using Louvain's algorithm
   """
