@@ -246,3 +246,13 @@ def draw_communities(graph, community):
                         cmap=cmap, node_color=list(community.values()))
   nx.draw_networkx_edges(graph, pos, alpha=0.5)
   plt.show()
+
+def draw_communities_fixed_pos(graph, community, pos):
+  """ 
+  Draws the graph using colors as community identifier using given pos
+  """
+  cmap = cm.get_cmap('viridis', max(community.values()) + 1)
+  nx.draw_networkx_nodes(graph, pos, community.keys(), node_size=40,
+                        cmap=cmap, node_color=list(community.values()))
+  nx.draw_networkx_edges(graph, pos, alpha=0.5)
+  plt.show()

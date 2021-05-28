@@ -260,7 +260,7 @@ def Louvain(graph):
   mod = mod_new
   communities.append(community)
 
-  print('First merge')
+  # print('First merge')
   graph_new = merge_communities(graph,community)
 
   while True:
@@ -274,7 +274,7 @@ def Louvain(graph):
     # print(community)
     # print('Comparing:', mod_new, mod, 'diff < 0.0000001????')
     if mod_new - mod < 0.0000001:
-      print('Exit')
+      # print('Exit')
       break
     
     mod = mod_new
