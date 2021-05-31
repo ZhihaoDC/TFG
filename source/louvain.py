@@ -14,8 +14,7 @@ import matplotlib.pyplot as plt
 import scipy
 import sys
 import matplotlib.cm as cm
-import community as community_louvain #for testing
-from random import shuffle, choice
+from random import shuffle
 
 def modularity(graph, m, community, k):
   """
