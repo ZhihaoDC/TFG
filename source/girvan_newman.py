@@ -172,8 +172,7 @@ def Girvan_Newman_dendrogram(graph):
   graphs = Girvan_Newman2(graph)
   dendrogram = []
   for g in graphs:
-    dendrogram.append([list(g.subgraph(c).nodes()) for c in nx.connected_components(g)])
-  
+    dendrogram.append([list(c) for c in nx.connected_components(g)])
   return dendrogram
 
 # #Test 
@@ -185,6 +184,8 @@ def Girvan_Newman_2004(graph):
   """
   Girvan Newman method proposed in Finding and evaluating community structure in networks
   by M. E. J. Newman and M. Girvan in 2004.
+
+  Iteratively removes edges with most edge-betweenness and returns the partition that 
   """
   g = graph.copy()
   k = graph.number_of_edges()
@@ -203,7 +204,7 @@ def Girvan_Newman_2004(graph):
     g.remove_edge(edge[0],edge[1])
 
     #Append dendrogram with connected components
-    dendrogram.append([list(g.subgraph(c).nodes()) for c in nx.connected_components(g.copy())])
+    dendrogram.append([list(c) for c in nx.connected_components(g)])
 
   
   #Select partition with best modularity
