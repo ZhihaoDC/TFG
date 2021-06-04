@@ -4,9 +4,7 @@ This is a repository created to keep track of changes in the code for my degree'
 
 ## girvan_newman.py
   Module of the Girvan Newman Algorithm. It is used in the comparativeAnalysis.ipynb notebook.
-  It implements helper methods like "edge_betweenness(graph)", the algorithm itself in "girvan_newman2004(graph)" and drawing methods like "draw_communities(graph, community)".
-  
-  The method proposed is the one described in "Fast unfolding of communities in large networks" by Blondel, also known as the Louvain method (article available at: https://arxiv.org/abs/0803.0476).
+  It implements helper methods like "edge_betweenness(graph)", the algorithm itself in "girvan_newman2004(graph)" and drawing methods like "draw_communities(graph, community)". 
    
   The method proposed is the one described in "Community structure in social and biological networks" by Girvan and Newman in 2002 (available at https://arxiv.org/abs/cond-mat/0112110), as well as the one proposed in "Finding and evaluating community structure in networks" by Newman and Girvan in 2004 (available at https://arxiv.org/abs/cond-mat/0308217).
 
