@@ -28,6 +28,17 @@
   align-items: center;
 }
 
+.mypadding{
+  padding-top: 10px;
+  padding-bottom: 10px;
+} 
+
+
+.mynav{
+  background-color: #f8f9fa;
+  color:#000000;
+}
+
 *{
   background-color:#222222;
   color: white;
