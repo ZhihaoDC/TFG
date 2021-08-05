@@ -204,7 +204,7 @@ def Girvan_Newman_2004(graph):
     g.remove_edge(edge[0],edge[1])
 
     #Append dendrogram with connected components
-    dendrogram.append([list(c) for c in nx.connected_components(g)])
+    dendrogram.append([list(g.subgraph(c).nodes) for c in nx.connected_components(g)])
 
   
   #Select partition with best modularity

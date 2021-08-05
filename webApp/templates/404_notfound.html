@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container-md content col-lg-4">
+        <h1 class="text-light h1"> Oops!</h1>
+        <h2 class="text-light h2"> Página no encontrada</h2>
+        <img src="../static/assets/404_img.png" alt="404 Not Found" style="max-width:500px" class="border">
+        <br>
+        <a class="link-light" href="{{ url_for('home') }}">Volver al inicio</a>
+    </div>
+{% endblock content %}

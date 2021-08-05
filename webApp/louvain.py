@@ -288,5 +288,4 @@ def last_community(graph, communities):
   for index in np.arange(1,len(communities)):
     for node, com in summary.items():
       summary[node] = communities[index][com]
-
   return summary

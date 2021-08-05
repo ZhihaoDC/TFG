@@ -28,18 +28,31 @@
   align-items: center;
 }
 
-.mypadding{
-  padding-top: 10px;
-  padding-bottom: 10px;
+.nopadding{
+  padding:0px
 } 
 
+canvas{
+  border: 25px
+}
+
+.myconfig> .vis-configuration-wrapper{
+  width:fit-content;
+  height:fit-content;
+  background-color: #f8f9fa;
+  color: white
+}
+
+.myconfig h1{
+  margin-top:0;
+}
 
 .mynav{
   background-color: #f8f9fa;
   color:#000000;
 }
 
-*{
+.mybg{
   background-color:#222222;
   color: white;
 }

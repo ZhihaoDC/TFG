@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-	<div class="container-md content">
+	<div class="container-md content col-lg-4">
 		<h1>Detectar comunidades</h1>
 		<div class=myspan>
 			<span>La red debe de estar representada como una lista de enlaces del grafo</span><br>
@@ -9,7 +9,19 @@
 		<form method=POST enctype=multipart/form-data>
 			{{form.hidden_tag()}}
 			<div>
-				{{form.file(class="form-control form-control-lg")}}
+				
+				
+				{% if form.file.errors %}
+					{{form.file(class="form-control form-control-lg is-invalid")}}
+					<div class="invalid-feedback">
+						{% for error in form.file.errors %}
+							<span> {{ error }} </span>
+						{% endfor %}
+					</div>
+				{% else %}
+					{{form.file(class="form-control form-control-lg")}}
+				{% endif %}
+
 			</div>
 			
 			<div class="form-check form-check-inline distributed">
@@ -24,7 +36,7 @@
 			
 
 			<div>
-				{{form.submit(class="btn btn-primary btn-lg")}}
+				{{form.submit(class="btn btn-primary btn-lg", id="submit")}}
 			</div>
 		</form> 
 	</div>
